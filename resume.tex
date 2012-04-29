@@ -1,120 +1,88 @@
-%
-% A minimal, latex resume.
-%
-% pbrisbin 2012
-%
-
-\documentclass[10pt,oneside]{article}
-\usepackage{geometry}
-\usepackage[T1]{fontenc}
-
-\pagestyle{empty}
-\geometry{ letterpaper
-         , tmargin=1in
-         , bmargin=1in
-         , lmargin=1in
-         , rmargin=1in
-         , headheight=0in
-         , headsep=0in
-         , footskip=0.3in
-         }
-
-\setlength{\parindent}{0in}
-\setlength{\parskip}{0in}
-\setlength{\itemsep}{0in}
-\setlength{\topsep}{0in}
-\setlength{\tabcolsep}{0.25in}
-
-% resheader(name, email, address, phone)
-\newcommand{\resheader}[4]{
-    \begin{center}
-        \selectfont \Huge \scshape #1 \\
-        \vspace{2pt}
-        \selectfont \small #2
-    \end{center}
-
-    \vspace{-7pt}
-    \rule{\textwidth}{1pt}
-
-    \vspace{-2pt}
-    {\small \itshape #3 \hfill #4}
-    \vspace{5pt}
-}
-
-% ressection(title)
-\newcommand{\ressection}[1]{
-    {\fontfamily{phv} \selectfont \large \scshape #1}
-    \vspace{2pt}
-}
-
-% resitem(school/company, location, degree/title, date)
-\newcommand{\resitem}[4]{
-    \vspace{2pt}
-              #1 \hfill #2 \\
-    {\itshape #3 \hfill #4}
-    \vspace{2pt}
-}
-
+\include{settings}
+\include{commands}
 \include{contact}
 
 \begin{document}
     \fontfamily{ppl} \selectfont
-    \resheader{\name}{\email}{\addr}{\phone}
 
-    foo bar baz bat foo  bar baz bat foo  bar baz bat foo  bar baz bat
-    foo  bar baz bat foo  bar baz bat foo  bar baz bat foo foo bar baz
-    bat foo  bar baz bat foo  bar baz bat foo  bar baz bat foo  bar baz
-    bat foo  bar baz bat foo  bar baz bat foo foo bar baz bat foo  bar
-    baz bat foo  bar baz bat foo  bar baz bat foo  bar baz bat foo  bar
-    baz bat foo  bar baz bat foo foo bar baz bat foo  bar baz bat foo
-    bar baz bat foo  bar baz bat foo  bar baz bat foo  bar baz bat foo
-    bar baz bat foo 
-
-    \vspace{10pt}
+    \begin{resheader}{\name}{\email}{\addr}{\phone}
+        Blah, blah, blah, this is the lead-in paragraph where I talk
+        about how awesome I am in one or two sentences. It's proving
+        difficult to write.
+    \end{resheader}
 
     \ressection{Qualifications}
 
-    \begin{itemize}
-    \item{...}
-    \item{...}
-    \item{...}
-    \item{...}
-    \item{...}
-    \item{...}
-    \end{itemize}
+    \begin{reslist}
+        \item{Capable of conversing functionally with business users and
+              technically with colleagues as well as translating
+              requirements between the two.}
+        \item{Comfortable in an environment where high scalability and
+              availability are key requirements of the application
+              being developed.}
+        \item{Curious and self-motivated; develops outside of work,
+              authoring and contributing to a number of open source
+              software projects.}
+        \item{Extremely comfortable in Unix-based systems and working
+              via the shell.}
+    \end{reslist}
+
+    \ressection{Technical Expertise}
+
+    \begin{restable}
+        {\bf Languages}:    & Ruby, Haskell, JavaScript, C, C\#, X++,
+                              PHP, Perl, Python, HTML/CSS, Shell \\
+        {\bf Frameworks}:   & Rails, Yesod, Prototype, Underscore, Node,
+                              .NET, TestUnit, RSpec \\
+        {\bf Technologies}: & Postgresql, MySQL, MongoDB, MSSQL, Riak,
+                              Nginx, Unicorn, Apache, Amazon Web
+                              Services, Graphite, Chef, Capistrano
+    \end{restable}
 
     \ressection{Professional Experience}
 
     \resitem{Ideeli Inc}{New York, NY}{Software Engineer}{2011 - present}
 
-    foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat foo
-    foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat foo
-    foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat foo
-    bar baz bat foo bar baz bat foo bar baz bat foo
+    Work both independently and as part of an Agile development team to
+    design and implement critical fixes and enhancements to a large
+    legacy Ruby on Rails Application. Use Test Driven Development and
+    performance benchmarking to ensure the application continues to
+    serve its 5 million users effectively.
 
-    \begin{itemize}
-    \item{...}
-    \item{...}
-    \item{...}
-    \end{itemize}
+    \begin{reslist}
+        \item{Chosen as a key Developer in an application-wide
+              re-architecting to be entirely service-based.}
+        \item{Independently developed a Skype bot to notify us of build
+              failures, automate deployments and provide in-chat access
+              to documentation and ticket tracking systems.}
+    \end{reslist}
 
     \resitem{Green Beacon Solutions LLC}{Newton, MA}{ERP Consultant}{2008 - 2011}
 
-    foo foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat
-    foo foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat
-    foo bar baz bat foo bar baz bat foo bar baz bat foo
+    Interfaced with clients to gather business requirements and create
+    functional specifications for custom solutions. Developed both
+    front-end user interfaces and back-end algorithms in X++, C\# and
+    Transact-SQL to meet the defined business needs.
 
-    \begin{itemize}
-    \item{...}
-    \item{...}
-    \end{itemize}
+    \begin{reslist}
+        \item{Developed custom .NET client for Dynamics AX used on
+              hand-held devices.}
+        \item{Received advanced certifications in both functional and
+              technical areas of MS Dynamics AX.}
+    \end{reslist}
 
     \resitem{Cooper Industries}{Chelsea, MA}{Manufacturing Engineer}{2007 - 2008}
 
-    \begin{itemize}
-    \item{...}
-    \item{...}
-    \end{itemize}
+    Authored build-to-print process instructions for the manufacture of
+    custom cable assemblies. Introduced Lean principles into the
+    manufacturing and QA processes. Ensured site compliance with Cooper
+    Industries comprehensive environmental and safety regulations.
+
+    \begin{reslist}
+        \item{Acted as Department lead during the transition to SAP
+              defining requirements and providing training and
+              documentation back to the team.}
+    \end{reslist}
 
     \ressection{Education}
 

@@ -1,0 +1,47 @@
+\newenvironment{resheader}[4]{
+    \begin{center}
+        \selectfont \Huge \scshape #1 \\
+        \vspace{2pt}
+        \selectfont \small #2
+    \end{center}
+
+    \vspace{-7pt}
+    \rule{\textwidth}{1pt}
+
+    \vspace{-2pt}
+    {\small \itshape #3 \hfill #4}
+    \vspace{5pt}
+
+}{
+
+    \vspace{5pt}
+}
+
+\newenvironment{reslist}{
+    \begin{itemize}\itemsep -2pt
+}{
+    \end{itemize}
+}
+
+\newenvironment{restable}{
+    \vspace{5pt}
+    \begin{tabular}{lp{5.25in}}
+}{
+    \end{tabular}
+    \vspace{5pt}
+}
+
+\newcommand{\ressection}[1]{
+    \vspace{2pt}
+    \begin{center}
+        {\fontfamily{phv} \selectfont \large \scshape #1}
+    \end{center}
+    \vspace{2pt}
+}
+
+\newcommand{\resitem}[4]{
+    \vspace{2pt}
+    {\bf      #1 \hfill #2}\\
+    {\itshape #3 \hfill #4}
+    \vspace{2pt}
+}
