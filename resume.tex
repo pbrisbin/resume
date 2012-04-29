@@ -1,0 +1,122 @@
+%
+% A minimal, latex resume.
+%
+% pbrisbin 2012
+%
+
+\documentclass[10pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{ letterpaper
+         , tmargin=1in
+         , bmargin=1in
+         , lmargin=1in
+         , rmargin=1in
+         , headheight=0in
+         , headsep=0in
+         , footskip=0.3in
+         }
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0.25in}
+
+% resheader(name, email, address, phone)
+\newcommand{\resheader}[4]{
+    \begin{center}
+        \selectfont \Huge \scshape #1 \\
+        \vspace{2pt}
+        \selectfont \small #2
+    \end{center}
+
+    \vspace{-7pt}
+    \rule{\textwidth}{1pt}
+
+    \vspace{-2pt}
+    {\small \itshape #3 \hfill #4}
+    \vspace{5pt}
+}
+
+% ressection(title)
+\newcommand{\ressection}[1]{
+    {\fontfamily{phv} \selectfont \large \scshape #1}
+    \vspace{2pt}
+}
+
+% resitem(school/company, location, degree/title, date)
+\newcommand{\resitem}[4]{
+    \vspace{2pt}
+              #1 \hfill #2 \\
+    {\itshape #3 \hfill #4}
+    \vspace{2pt}
+}
+
+\include{contact}
+
+\begin{document}
+    \fontfamily{ppl} \selectfont
+    \resheader{\name}{\email}{\addr}{\phone}
+
+    foo bar baz bat foo  bar baz bat foo  bar baz bat foo  bar baz bat
+    foo  bar baz bat foo  bar baz bat foo  bar baz bat foo foo bar baz
+    bat foo  bar baz bat foo  bar baz bat foo  bar baz bat foo  bar baz
+    bat foo  bar baz bat foo  bar baz bat foo foo bar baz bat foo  bar
+    baz bat foo  bar baz bat foo  bar baz bat foo  bar baz bat foo  bar
+    baz bat foo  bar baz bat foo foo bar baz bat foo  bar baz bat foo
+    bar baz bat foo  bar baz bat foo  bar baz bat foo  bar baz bat foo
+    bar baz bat foo 
+
+    \vspace{10pt}
+
+    \ressection{Qualifications}
+
+    \begin{itemize}
+    \item{...}
+    \item{...}
+    \item{...}
+    \item{...}
+    \item{...}
+    \item{...}
+    \end{itemize}
+
+    \ressection{Professional Experience}
+
+    \resitem{Ideeli Inc}{New York, NY}{Software Engineer}{2011 - present}
+
+    foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat foo
+    foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat foo
+    foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat foo
+    bar baz bat foo bar baz bat foo bar baz bat foo
+
+    \begin{itemize}
+    \item{...}
+    \item{...}
+    \item{...}
+    \end{itemize}
+
+    \resitem{Green Beacon Solutions LLC}{Newton, MA}{ERP Consultant}{2008 - 2011}
+
+    foo foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat
+    foo foo bar baz bat foo bar baz bat foo bar baz bat foo bar baz bat
+    foo bar baz bat foo bar baz bat foo bar baz bat foo
+
+    \begin{itemize}
+    \item{...}
+    \item{...}
+    \end{itemize}
+
+    \resitem{Cooper Industries}{Chelsea, MA}{Manufacturing Engineer}{2007 - 2008}
+
+    \begin{itemize}
+    \item{...}
+    \item{...}
+    \end{itemize}
+
+    \ressection{Education}
+
+    \resitem{Boston University}{Boston, MA}{Bachelor of Science, Aerospace Engineering}{5/07}
+\end{document}
