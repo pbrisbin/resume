@@ -1,6 +1,6 @@
 # Resume
 
-The most up to date version is *usually* available at [here][].
+The most up to date version is *usually* available [here][].
 
 [here]: http://files.pbrisbin.com/resume.pdf
 
